@@ -102,16 +102,17 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
 
-  .container {
+  .container1 {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 
   .relative {

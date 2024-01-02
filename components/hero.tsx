@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex max-w-[980px] flex-col items-start gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
+    <section className="flex max-w-[750px] flex-col items-start gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
       <a
         className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
         href="/docs/changelog"
@@ -47,7 +47,7 @@ const Hero = () => {
       >
         Browse through our mouthwatering menu and experience pizza like never before! With a tantalizing array of flavors, toppings, and crusts, your perfect slice is just a tap away. Order now and get ready for a piping hot, freshly made pizza delivered straight to your doorstep. Satisfaction guaranteed, one slice at a time.
       </span>
-      <div className="flex w-full items-center space-x-4 py-4 md:pb-10">
+      <div className="flex  items-center space-x-4 py-4 md:pb-10">
         <a
           className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-primary-foreground shadow hover:bg-primary/90 h-9 px-4 py-2 rounded-[6px]"
           href="/docs"

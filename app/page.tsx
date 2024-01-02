@@ -7,7 +7,7 @@ export default function Home() {
     <div className="relative flex min-h-screen flex-col bg-background">
       <MainNavigationMenu />
       <main className="flex-1">
-        <div className="container relative">
+        <div className="container1 relative">
           <Hero />
         </div>
       </main>
