@@ -105,7 +105,7 @@ export function MainNavigationMenu() {
                   <NavigationMenuItem>
                     <Link href="/docs" legacyBehavior passHref>
                       <a
-                        className=" bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors p-4 ml-2 text-primary-foreground py-2 text-md font-medium rounded-[6px]"
+                        className=" bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors p-4 ml-2 text-primary py-2 text-md font-medium rounded-[6px]"
                         href="/docs"
                       >
                         Login
