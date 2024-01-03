@@ -56,9 +56,28 @@ const Order = () => {
                             }
                         </div>
 
-                        <div className="flex-[33.33%] h-[350px] flex-col  bg-blue-500 rounded-xl">
-                            <div className="p-12 text-lg">
+                        <div className="p-6 flex-[33.33%] gap-7 h-[10%] flex-col bg-blue-500 rounded-xl">
+                            <div className="text-2xl font-semibold">
                                 Your Order
+                            </div>
+                            <div className='text-md font-semibold'>
+                                Delivery: Free
+                            </div>
+                            <div className='flex justify-between text-md font-bold'>
+                                <div>
+                                    TOTAL:
+                                </div>
+                                <div>
+                                    50$
+                                </div>
+                            </div>
+                            <div className="flex items-center">
+                                <a
+                                    className="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-primary/90 h-10 px-4 py-2 rounded-[8px]"
+                                    href="/order"
+                                >
+                                    Proceed to Checkout
+                                </a>
                             </div>
                         </div>
                     </div>
