@@ -57,13 +57,23 @@ const Order = () => {
               ))}
             </div>
 
-            <div className="p-6 flex-[33.33%] gap-7 h-[10%] flex-col shadow-md rounded-xl">
-              <div className="text-2xl font-semibold">Your Order</div>
-              <div className="flex justify-between text-md font-semibold">
+            <div className="p-6 flex-[33.33%] h-[10%] flex-col shadow-md rounded-xl">
+              <div className="text-2xl font-semibold mb-2">Your Order</div>
+
+              <div>
+                {arr.map((pizz: any) => (
+                  <div className="py-1 font-medium flex justify-between">
+                    <div>{pizz.title}</div>
+                    <div>counter</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex justify-between text-md font-semibold mt-3">
                 <div>Delivery:</div>
                 <div>Free</div>
               </div>
-              <div className="flex justify-between text-md font-bold">
+              <div className="flex justify-between text-md font-bold mb-2">
                 <div>TOTAL:</div>
                 <div>50$</div>
               </div>
