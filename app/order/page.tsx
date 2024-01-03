@@ -6,24 +6,32 @@ const arr: any = [
         title: "Italian Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
+        cost: 50,
+        quantity: 1,
     },
     {
         imgLoc: "/hero.jpg",
         title: "Italian Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
+        cost: 50,
+        quantity: 1,
     },
     {
         imgLoc: "/hero.jpg",
         title: "Italian Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
+        cost: 50,
+        quantity: 1,
     },
     {
         imgLoc: "/hero.jpg",
         title: "Italian Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
+        cost: 50,
+        quantity: 1,
     },
 ];
 
@@ -51,7 +59,14 @@ const Order = () => {
                                         <div>{pizz.title}</div>
                                         <div>{pizz.desc}</div>
                                         <div>{pizz.bestSeller}</div>
-                                        <div>Order Now</div>
+                                        <div className="flex items-center">
+                                            <a
+                                                className="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-primary/90 h-10 px-4 py-2 rounded-[8px]"
+                                                href="/order"
+                                            >
+                                                Add to Cart
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
@@ -65,19 +80,21 @@ const Order = () => {
                                     <div className="py-1 font-medium flex justify-between">
                                         <div>{pizz.title}</div>
                                         <div className="flex gap-2 items-center justify-center  px-3 rounded-full shadow-md">
-                                            <div className="">-</div>
-                                            <div className="px-1 rounded text-[#D72E3B]">{1}</div>
-                                            <div className=" ">+</div>
+                                            <div >-</div>
+                                            <div className="px-1 rounded text-[#D72E3B] ">{
+                                                pizz.quantity
+                                            }</div>
+                                            <div>+</div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="flex justify-between text-md font-semibold mt-3">
+                            <div className="flex justify-between text-md font-semibold mt-4">
                                 <div>Delivery:</div>
                                 <div>Free</div>
                             </div>
-                            <div className="flex justify-between text-md font-bold mb-2">
+                            <div className="flex justify-between text-md font-bold mb-4">
                                 <div>TOTAL:</div>
                                 <div>50$</div>
                             </div>
@@ -92,8 +109,8 @@ const Order = () => {
                         </div>
                     </div>
                 </div>
-            </main>
-        </div>
+            </main >
+        </div >
     );
 };
 
