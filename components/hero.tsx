@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex gap-4 overflow-hidden">
+    <section className="container1 flex gap-16  max-w-screen-2xl overflow-hidden items-center ">
       <div className="flex max-w-[750px] flex-col items-start gap-6 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
         <a
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
@@ -33,7 +33,9 @@ const Hero = () => {
           </svg>
         </a>
         <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1] hidden md:block">
-          PIZZA<br />DELIVERY
+          PIZZA
+          <br />
+          DELIVERY
         </h1>
         <span
           className="max-w-[650px] text-lg text-muted-foreground sm:text-xl"
@@ -46,7 +48,11 @@ const Hero = () => {
             maxWidth: 540,
           }}
         >
-          Browse through our mouthwatering menu and experience pizza like never before! With a tantalizing array of flavors, toppings, and crusts, your perfect slice is just a tap away. Order now and get ready for a piping hot, freshly made pizza delivered straight to your doorstep. Satisfaction guaranteed, one slice at a time.
+          Browse through our mouthwatering menu and experience pizza like never
+          before! With a tantalizing array of flavors, toppings, and crusts,
+          your perfect slice is just a tap away. Order now and get ready for a
+          piping hot, freshly made pizza delivered straight to your doorstep.
+          Satisfaction guaranteed, one slice at a time.
         </span>
         <div className="flex items-center space-x-4 md:pb-10">
           <a
@@ -57,9 +63,13 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="w-1/2 py-6 md:py-16 lg:py-26">
+      <div className="w-1/2 py-6 md:py-16 lg:py-26 overflow-hidden">
         <div className="w-[740px]">
-          <img className="h-1/2 rounded-3xl" src="/hero.jpg" alt="pizza-cool" />
+          <img
+            className="h-1/2 rounded-l-[100px]"
+            src="/hero.jpg"
+            alt="pizza-cool"
+          />
         </div>
       </div>
     </section>
