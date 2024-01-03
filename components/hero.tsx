@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="container1 flex gap-16  max-w-screen-2xl overflow-hidden items-center ">
+    <section className="container1 flex justify-between  max-w-screen-2xl overflow-hidden items-center ">
       <div className="flex max-w-[750px] flex-col items-start gap-6 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
         <a
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
