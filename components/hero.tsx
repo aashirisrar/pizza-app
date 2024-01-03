@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="flex max-w-[750px] flex-col items-start gap-6 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-20">
         <a
           className="inline-flex items-center rounded-lg bg-muted px-3 py-1 text-sm font-medium"
-          href="/docs/changelog"
+          href="/menu"
         >
           🎉{" "}
           <div
@@ -50,8 +50,8 @@ const Hero = () => {
         </span>
         <div className="flex items-center space-x-4 md:pb-10">
           <a
-            className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-primary/90 h-9 px-4 py-2 rounded-[6px]"
-            href="/docs"
+            className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-primary/90 h-10 px-4 py-2 rounded-[6px]"
+            href="/order"
           >
             Order Now
           </a>
