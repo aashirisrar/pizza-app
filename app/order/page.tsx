@@ -1,9 +1,12 @@
-import React from "react";
+"use client"
+
+import { News_Cycle } from "next/font/google";
+import React, { useState } from "react";
 
 const arr: any = [
     {
         imgLoc: "/hero.jpg",
-        title: "Italian Pizza",
+        title: "French Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
         cost: 50,
@@ -19,7 +22,7 @@ const arr: any = [
     },
     {
         imgLoc: "/hero.jpg",
-        title: "Italian Pizza",
+        title: "Macaroni Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
         cost: 50,
@@ -27,7 +30,7 @@ const arr: any = [
     },
     {
         imgLoc: "/hero.jpg",
-        title: "Italian Pizza",
+        title: "Pan Pizza",
         desc: "Spicy",
         bestSeller: "Best Seller",
         cost: 50,
@@ -36,6 +39,21 @@ const arr: any = [
 ];
 
 const Order = () => {
+    const [orderitems, setOrderitems] = useState([{}]);
+
+    const [cost, setcost] = useState(0);
+
+    const handleClick = (e: any) => {
+        const newitems = [...orderitems, e];
+        setOrderitems(newitems);
+
+        const newcost = cost + e.cost;
+
+        setcost(newcost);
+    }
+
+
+
     return (
         <div className="container1 relative flex max-w-screen-2xl flex-col bg-background mb-12">
             <main className="flex-1 ">
@@ -49,7 +67,7 @@ const Order = () => {
                     <div className="flex gap-4">
                         <div className="w-[80%] grid gap-6 grid-cols-3 items-start justify-start ">
                             {arr.map((pizz: any) => (
-                                <div className="w-full shadow-lg rounded-xl">
+                                <div className="w-full shadow-lg rounded-xl" key={pizz.title}>
                                     <img
                                         src={pizz.imgLoc}
                                         className="rounded-t-xl"
@@ -60,12 +78,11 @@ const Order = () => {
                                         <div>{pizz.desc}</div>
                                         <div>{pizz.bestSeller}</div>
                                         <div className="flex items-center">
-                                            <a
+                                            <button onClick={() => handleClick(pizz)}
                                                 className="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-primary/90 h-10 px-4 py-2 rounded-[8px]"
-                                                href="/order"
                                             >
                                                 Add to Cart
-                                            </a>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -76,8 +93,8 @@ const Order = () => {
                             <div className="text-2xl font-semibold mb-2">Your Order</div>
 
                             <div>
-                                {arr.map((pizz: any) => (
-                                    <div className="py-1 font-medium flex justify-between">
+                                {orderitems.map((pizz: any) => (
+                                    <div className="py-1 font-medium flex justify-between" key={pizz.title}>
                                         <div>{pizz.title}</div>
                                         <div className="flex gap-2 items-center justify-center  px-3 rounded-full shadow-md">
                                             <div >-</div>
@@ -96,7 +113,7 @@ const Order = () => {
                             </div>
                             <div className="flex justify-between text-md font-bold mb-4">
                                 <div>TOTAL:</div>
-                                <div>50$</div>
+                                <div>{cost}$</div>
                             </div>
                             <div className="flex items-center">
                                 <a
@@ -112,6 +129,6 @@ const Order = () => {
             </main >
         </div >
     );
-};
+}
 
 export default Order;
