@@ -1,6 +1,5 @@
 "use client"
 
-import { News_Cycle } from "next/font/google";
 import React, { useState } from "react";
 
 const arr: any = [
@@ -118,7 +117,7 @@ const Order = () => {
                             <div className="flex items-center">
                                 <a
                                     className="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-primary/90 h-10 px-4 py-2 rounded-[8px]"
-                                    href="/order"
+                                    href="#"
                                 >
                                     Proceed to Checkout
                                 </a>
