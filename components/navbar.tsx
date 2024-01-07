@@ -18,7 +18,9 @@ export function MainNavigationMenu() {
       <div className="container1 flex h-20 max-w-screen-2xl items-center">
         <a className="mr-6 flex items-center space-x-2" href="/">
           <span className="text-3xl">🍕</span>
-          <span className="hidden text-2xl font-bold sm:inline-block">PRIZZA</span>
+          <span className="hidden text-2xl font-bold sm:inline-block">
+            PRIZZA
+          </span>
         </a>
 
         <div className="flex  flex-1 items-center justify-between space-x-2 md:justify-end">
@@ -28,44 +30,52 @@ export function MainNavigationMenu() {
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <Link href="/" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
                         Home
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/menu" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
                         Menu
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/book" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
                         Book
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/order" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
                         Order
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/about" legacyBehavior passHref>
-                      <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                      <NavigationMenuLink
+                        className={navigationMenuTriggerStyle()}
+                      >
                         About
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href="/login" legacyBehavior passHref>
-                      <a
-                        className="group w-max h-10 items-center justify-center inline-flex bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors py-2 px-4 ml-2 text-white text-lg font-medium rounded-[6px]"
-                      >
+                      <a className="group w-max h-10 items-center justify-center inline-flex bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors py-2 px-4 ml-2 text-white text-lg font-medium rounded-[6px]">
                         Login
                       </a>
                     </Link>
@@ -80,4 +90,3 @@ export function MainNavigationMenu() {
     </header>
   );
 }
-
