@@ -4,33 +4,33 @@ import React, { useState } from "react";
 
 const arr: any = [
   {
-    imgLoc: "/hero.jpg",
-    title: "French Pizza",
-    desc: "Spicy",
+    image: "/hero.jpg",
+    name: "French Pizza",
+    description: "Spicy",
     bestSeller: "Best Seller",
     cost: 50,
     quantity: 1,
   },
   {
-    imgLoc: "/hero.jpg",
-    title: "Italian Pizza",
-    desc: "Spicy",
+    image: "/hero.jpg",
+    name: "Italian Pizza",
+    description: "Spicy",
     bestSeller: "Best Seller",
     cost: 50,
     quantity: 1,
   },
   {
-    imgLoc: "/hero.jpg",
-    title: "Macaroni Pizza",
-    desc: "Spicy",
+    image: "/hero.jpg",
+    name: "Macaroni Pizza",
+    description: "Spicy",
     bestSeller: "Best Seller",
     cost: 50,
     quantity: 1,
   },
   {
-    imgLoc: "/hero.jpg",
-    title: "Pan Pizza",
-    desc: "Spicy",
+    image: "/hero.jpg",
+    name: "Pan Pizza",
+    description: "Spicy",
     bestSeller: "Best Seller",
     cost: 50,
     quantity: 1,
@@ -44,12 +44,12 @@ const Order = () => {
 
   const handleClick = (e: any) => {
     // Check if item already exists in orderitems
-    const itemExists = orderitems.find((item: any) => item.title === e.title);
+    const itemExists = orderitems.find((item: any) => item.name === e.name);
     // If item exists, increment quantity
     // Else, add item to orderitems
     if (itemExists) {
       const updatedItems = orderitems.map((item: any) =>
-        item.title === e.title ? { ...item, quantity: item.quantity + 1 } : item
+        item.name === e.name ? { ...item, quantity: item.quantity + 1 } : item
       );
       setOrderitems(updatedItems);
     } else {
@@ -64,9 +64,7 @@ const Order = () => {
 
   const incrementQuantity = (pizza: any) => {
     const updatedItems = orderitems.map((item: any) =>
-      item.title === pizza.title
-        ? { ...item, quantity: item.quantity + 1 }
-        : item
+      item.name === pizza.name ? { ...item, quantity: item.quantity + 1 } : item
     );
 
     setOrderitems(updatedItems);
@@ -78,7 +76,7 @@ const Order = () => {
 
   const decrementQuantity = (pizza: any) => {
     const updatedItems = orderitems.map((item: any) =>
-      item.title === pizza.title && item.quantity > 1
+      item.name === pizza.name && item.quantity > 1
         ? { ...item, quantity: item.quantity - 1 }
         : item
     );
@@ -91,7 +89,7 @@ const Order = () => {
       setOrderitems(updatedItems);
     } else {
       const filteredItems = orderitems.filter(
-        (item: any) => item.title !== pizza.title
+        (item: any) => item.name !== pizza.name
       );
       setOrderitems(filteredItems);
     }
@@ -110,18 +108,18 @@ const Order = () => {
           <div className="flex gap-4">
             <div className="w-[80%] grid gap-6 grid-cols-3 items-start justify-start ">
               {arr.map((pizz: any) => (
-                <div className="w-full shadow-lg rounded-xl" key={pizz.title}>
+                <div className="w-full shadow-lg rounded-xl" key={pizz.name}>
                   <img
-                    src={pizz.imgLoc}
+                    src={pizz.image}
                     className="rounded-t-xl"
                     alt="pizza-1"
                   />
                   <div className="p-4">
-                    <div className="text-md font-medium">{pizz.title}</div>
+                    <div className="text-md font-medium">{pizz.name}</div>
                     <div className="flex justify-between my-3">
                       <div className="flex gap-2">
                         <div className="px-3 py-1 text-sm w-fit rounded-full bg-[#D72E3B] text-white">
-                          {pizz.desc}
+                          {pizz.description}
                         </div>
                         <div className="px-3 py-1 text-sm w-fit rounded-full bg-[#D72E3B] text-white">
                           {pizz.bestSeller}
@@ -149,9 +147,9 @@ const Order = () => {
                 {orderitems.map((pizz: any) => (
                   <div
                     className="py-1 font-medium flex justify-between"
-                    key={pizz.title}
+                    key={pizz.name}
                   >
-                    <div>{pizz.title}</div>
+                    <div>{pizz.name}</div>
                     <div className="flex gap-2 items-center justify-center  px-3 rounded-full shadow-md">
                       <button
                         className="cursor-pointer"
