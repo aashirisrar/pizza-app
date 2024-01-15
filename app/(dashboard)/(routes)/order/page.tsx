@@ -72,6 +72,20 @@ const Order = () => {
     }
   };
 
+  const createOrder = async () => {
+    const order = {
+      orderitems,
+      cost,
+    };
+
+    try {
+      const orderResponse = axios.post("api/addorder", order);
+      console.log(orderResponse);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <div className="container1 relative flex max-w-screen-2xl flex-col bg-background mb-12">
       <main className="flex-1 ">
@@ -161,9 +175,12 @@ const Order = () => {
                 <div>{cost}$</div>
               </div>
               <div className="flex items-center">
-                <a className="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-[#bc2c38] h-10 px-4 py-2 rounded-[8px]">
+                <button
+                  onClick={createOrder}
+                  className="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-[#D72E3B] text-white shadow hover:bg-[#bc2c38] h-10 px-4 py-2 rounded-[8px]"
+                >
                   Proceed to Checkout
-                </a>
+                </button>
               </div>
             </div>
           </div>
