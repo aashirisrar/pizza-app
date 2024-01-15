@@ -117,9 +117,18 @@ const Order = () => {
                     alt="pizza-1"
                   />
                   <div className="p-4">
-                    <div>{pizz.title}</div>
-                    <div>{pizz.desc}</div>
-                    <div>{pizz.bestSeller}</div>
+                    <div className="text-md font-medium">{pizz.title}</div>
+                    <div className="flex justify-between my-3">
+                      <div className="flex gap-2">
+                        <div className="px-3 py-1 text-sm w-fit rounded-full bg-[#D72E3B] text-white">
+                          {pizz.desc}
+                        </div>
+                        <div className="px-3 py-1 text-sm w-fit rounded-full bg-[#D72E3B] text-white">
+                          {pizz.bestSeller}
+                        </div>
+                      </div>
+                      <div className="text-md font-medium">${pizz.cost}</div>
+                    </div>
                     <div className="flex items-center">
                       <button
                         onClick={() => handleClick(pizz)}
