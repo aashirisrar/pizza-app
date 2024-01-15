@@ -76,7 +76,7 @@ export function MainNavigationMenu() {
                   <NavigationMenuItem>
                     <Link
                       href="api/auth/signin"
-                      className="group w-max h-10 items-center justify-center inline-flex bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors py-2 px-4 mr-2 text-white text-md font-medium rounded-[6px]"
+                      className="group ml-1 w-max h-10 items-center justify-center inline-flex bg-[#D72E3B] hover:bg-[#bc2c38] transition-colors py-2 px-4 mr-2 text-white text-md font-medium rounded-[6px]"
                     >
                       Login
                     </Link>

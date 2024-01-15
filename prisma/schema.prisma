@@ -59,7 +59,8 @@ model VerificationToken {
 model Order {
   id             String    @id @default(cuid())
   products       Product[]
-  ordered        Boolean   @default(false)
+  orderStatus    Boolean   @default(false)
+  totalPrice     Int
   orderedBy      User?     @relation(fields: [orderedByEmail], references: [email])
   orderedByEmail String?
 }
