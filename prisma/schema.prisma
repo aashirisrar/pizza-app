@@ -57,15 +57,24 @@ model VerificationToken {
 }
 
 model Order {
-  id             String    @id @default(cuid())
-  products       Product[] // Define the one-to-many relationship here
-  orderStatus    Boolean   @default(false)
+  id             String      @id @default(cuid())
+  products       OrderItem[] // Define the one-to-many relationship here
+  orderStatus    Boolean     @default(false)
   totalPrice     Int
-  orderedBy      User?     @relation(fields: [orderedByEmail], references: [email])
+  orderedBy      User?       @relation(fields: [orderedByEmail], references: [email])
   orderedByEmail String?
 }
 
 model Product {
+  id          String @id @default(cuid())
+  name        String
+  description String
+  cost        Float
+  image       String
+  quantity    Int    @default(1)
+}
+
+model OrderItem {
   id          String  @id @default(cuid())
   name        String
   description String
