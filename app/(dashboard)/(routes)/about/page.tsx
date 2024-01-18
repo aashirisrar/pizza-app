@@ -10,7 +10,7 @@ const About = () => {
               About Us
             </h1>
           </div>
-          <div className="flex gap-5">
+          <div className="flex flex-col items-center gap-5">
             <div className="text-start w-1/2">
               <div>
                 Prizza is a pizza outlet located in the midst of Lahore. This is
