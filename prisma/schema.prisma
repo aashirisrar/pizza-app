@@ -58,7 +58,7 @@ model VerificationToken {
 
 model Order {
   id             String    @id @default(cuid())
-  products       Product[]
+  products       Product[] // Define the one-to-many relationship here
   orderStatus    Boolean   @default(false)
   totalPrice     Int
   orderedBy      User?     @relation(fields: [orderedByEmail], references: [email])
@@ -72,5 +72,6 @@ model Product {
   cost        Float
   image       String
   quantity    Int
-  Order       Order[]
+  orderId     String? // Add a foreign key to the Order model
+  Order       Order?  @relation(fields: [orderId], references: [id])
 }
