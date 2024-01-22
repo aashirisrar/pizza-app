@@ -3,41 +3,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const arr: any = [
-  {
-    imgLoc: "/hero.jpg",
-    title: "French Pizza",
-    desc: "Spicy",
-    bestSeller: "Best Seller",
-    cost: 50,
-    quantity: 1,
-  },
-  {
-    imgLoc: "/hero.jpg",
-    title: "Italian Pizza",
-    desc: "Spicy",
-    bestSeller: "Best Seller",
-    cost: 50,
-    quantity: 1,
-  },
-  {
-    imgLoc: "/hero.jpg",
-    title: "Macaroni Pizza",
-    desc: "Spicy",
-    bestSeller: "Best Seller",
-    cost: 50,
-    quantity: 1,
-  },
-  {
-    imgLoc: "/hero.jpg",
-    title: "Pan Pizza",
-    desc: "Spicy",
-    bestSeller: "Best Seller",
-    cost: 50,
-    quantity: 1,
-  },
-];
-
 const Menu = () => {
   const [arr, setArr] = useState([]);
   useEffect(() => {
