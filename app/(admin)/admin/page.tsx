@@ -9,6 +9,7 @@ const AdminPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       const ord = await axios.post("api/getorders");
+      console.log(ord.data.products);
       setOrders(ord.data.data);
     };
 
