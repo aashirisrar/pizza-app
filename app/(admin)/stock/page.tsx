@@ -1,5 +1,6 @@
 "use client";
 
+import { StockForm } from "@/components/stock-form";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
@@ -24,13 +25,21 @@ const StockPage = () => {
               Stock Management
             </h1>
           </div>
+          <div className="flex flex-col items-center my-6">
+            <div className="my-4 font-semibold">Add Stock</div>
+            <StockForm />
+          </div>
           <div className="flex flex-col items-center">
             {products.map((products: any) => (
               <div className="mb-6 shadow-lg rounded-xl p-4" key={products.id}>
                 <div>Product Id: {products.id}</div>
-                <div className="mt-2 text-[#D72E3B] font-semibold">
+                <div className="mt-2 font-semibold flex gap-4">
                   Stock Status:
-                  {products.quantity ? " In Stock" : " Not in Stock"}
+                  {products.quantity ? (
+                    <div className="text-green-700">In Stock</div>
+                  ) : (
+                    <div className="text-red-700">Not in Stock</div>
+                  )}
                 </div>
                 <div className="mt-2 font-semibold">Quantity:</div>
                 <div>
