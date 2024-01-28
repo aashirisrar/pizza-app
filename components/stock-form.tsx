@@ -41,8 +41,8 @@ export function StockForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log(values);
       const resp = await axios.post("api/addstock", values);
+      console.log(resp);
     } catch (error) {
       console.log(error);
     }
