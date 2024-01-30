@@ -1,20 +1,27 @@
 "use client";
 
 import { StockForm } from "@/components/stock-form";
+import { Button } from "@/components/ui/button";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const StockPage = () => {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const fetchOrders = async () => {
-      const ord = await axios.post("api/getstock");
-      setProducts(ord.data.products);
-    };
+  const fetchOrders = async () => {
+    const ord = await axios.post("api/getstock");
+    setProducts(ord.data.products);
+  };
 
+  useEffect(() => {
     fetchOrders();
   }, []);
+
+  const deleteProduct = async (prodId: any) => {
+    const values = { id: prodId };
+    await axios.post("api/deleteproduct", values);
+    fetchOrders();
+  };
 
   return (
     <div className="relative flex min-h-screen flex-col bg-background">
@@ -26,9 +33,13 @@ const StockPage = () => {
             </h1>
           </div>
           <div className="flex flex-col items-center my-6">
-            <div className="my-4 font-semibold">Add Stock</div>
+            <div className="my-4 text-lg font-semibold">Add Stock</div>
             <StockForm />
           </div>
+          <div className="text-center font-semibold mb-4 mt-14 text-lg">
+            Current Items in Stock
+          </div>
+          {/* ------------------------------------------------ */}
           <div className="flex flex-col items-center">
             {products.map((products: any) => (
               <div className="mb-6 shadow-lg rounded-xl p-4" key={products.id}>
@@ -47,6 +58,12 @@ const StockPage = () => {
                     <div>{products.name}</div>
                     <div>x{products.stock}</div>
                   </div>
+                  <Button
+                    className="my-2"
+                    onClick={() => deleteProduct(products.id)}
+                  >
+                    Delete Product
+                  </Button>
                 </div>
               </div>
             ))}
