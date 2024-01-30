@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -42,6 +41,7 @@ export function StockForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       const resp = await axios.post("api/addstock", values);
+      location.reload();
       console.log(resp);
     } catch (error) {
       console.log(error);
