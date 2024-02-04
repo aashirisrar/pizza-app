@@ -80,7 +80,8 @@ const Order = () => {
 
     try {
       const orderResponse = axios.post("api/addorder", order);
-      console.log(orderResponse);
+      const stripeResponse = axios.post("api/stripe", order);
+      window.location.href = (await stripeResponse).data.url;
     } catch (err) {
       console.log(err);
     }
