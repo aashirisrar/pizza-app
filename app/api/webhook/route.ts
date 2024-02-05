@@ -18,12 +18,16 @@ export async function POST(req: Request) {
 
     const session = event.data.object as Stripe.Checkout.Session;
     if (event.type === "checkout.session.completed") {
-      await prisma.order.create({
+      await prisma.order.update({
+        where: {
+          id: session.metadata?.id,
+        },
         data: {
-          totalPrice: session.amount_total!,
+          orderStatus: true,
         },
       });
     }
+    return new Response(null, { status: 200 });
   } catch (error: any) {
     return new Response(`Webhook Error: ${error.message}`, { status: 400 });
   }
