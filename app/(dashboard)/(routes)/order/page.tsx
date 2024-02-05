@@ -73,14 +73,15 @@ const Order = () => {
   };
 
   const createOrder = async () => {
-    const order = {
+    let order = {
       orderitems,
       cost,
     };
 
     try {
       const orderResponse = axios.post("api/addorder", order);
-      const stripeResponse = axios.post("api/stripe", order);
+      const { id } = (await orderResponse).data.data.id;
+      const stripeResponse = axios.post("api/stripe", order, id);
       window.location.href = (await stripeResponse).data.url;
     } catch (err) {
       console.log(err);

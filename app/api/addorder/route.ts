@@ -12,7 +12,6 @@ export async function POST(req: Request) {
     const currentUserEmail = user?.email;
 
     const { cost, orderitems } = await req.json();
-    console.log(orderitems);
 
     const newOrder = await prisma.order.create({
       data: {

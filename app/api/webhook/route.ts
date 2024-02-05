@@ -17,13 +17,10 @@ export async function POST(req: Request) {
     );
 
     const session = event.data.object as Stripe.Checkout.Session;
-    if (event.type === "invoice.payment_succeeded") {
-      await prisma.order.update({
-        where: {
-          id: session.id,
-        },
+    if (event.type === "checkout.session.completed") {
+      await prisma.order.create({
         data: {
-          orderStatus: true,
+          totalPrice: session.amount_total!,
         },
       });
     }

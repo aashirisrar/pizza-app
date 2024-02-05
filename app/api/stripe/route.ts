@@ -20,8 +20,8 @@ export async function POST(req: Request) {
         },
       ],
       mode: "payment",
-      success_url: "https://localhost:3000",
-      cancel_url: "https://localhost:3000",
+      success_url: "http://localhost:3000",
+      cancel_url: "http://localhost:3000",
     });
 
     return new NextResponse(JSON.stringify({ url: stripeSession.url }));
