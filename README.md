@@ -15,7 +15,7 @@ This repository contains the source code for a pizza delivery application design
 
 # Clone the repository:
 
-git clone [https://github.com/aashirisrar/pizza-app](https://github.com/aashirisrar/pizza-app)
+    git clone "https://github.com/aashirisrar/pizza-app"
 
 # Install dependencies:
 
