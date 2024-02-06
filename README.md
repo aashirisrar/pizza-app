@@ -19,8 +19,8 @@ git clone [https://github.com/aashirisrar/pizza-app](https://github.com/aashiris
 
 # Install dependencies:
 
-cd pizza-app
-npm install
+    cd pizza-app
+    npm install
 
 # Set up environment variables:
 
