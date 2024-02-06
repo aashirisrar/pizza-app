@@ -1,6 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import axios from "axios";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const AdminPage = () => {
@@ -26,6 +28,9 @@ const AdminPage = () => {
             <h1 className="text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1] hidden md:block">
               Orders
             </h1>
+            <Link href="/stock">
+              <Button className="mt-6">Update Stock</Button>
+            </Link>
           </div>
           <div className="flex flex-col items-center">
             {orders.map((order: any) => (
