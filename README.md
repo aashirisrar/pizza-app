@@ -11,6 +11,17 @@ This repository contains the source code for a pizza delivery application design
 - Admin Dashboard: Admins have access to a dashboard to view orders, manage deliveries, and track sales.
 - Payment Integration: Secure payment gateway integration for online payments.
 
+ ## Technologies Used
+
+- **Next.js:** React framework for server-side rendering and front-end development.
+- **React:** Building dynamic and interactive user interfaces.
+- **Tailwind CSS:** Utility-first CSS framework for responsive and aesthetic designs.
+- **Shadcn UI Library:** Enhancing UI components with modern aesthetics and functionality.
+- **Stripe:** Payment gateway for secure and efficient transaction processing.
+- **Prisma:** ORM (Object-Relational Mapping) for TypeScript and PostgreSQL, simplifying database interactions.
+- **TypeScript:** Adds static typing and scalability to the application codebase.
+- **PostgreSQL:** Robust relational database management system for storing application data securely.
+
 ## Installation
 
 # Clone the repository:
